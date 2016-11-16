@@ -20,7 +20,7 @@ app.get('/volumes', async (req, res) => {
   res.json(result);
 });
 
-app.get(/.+/, async (req, res) => {
+app.get('*', async (req, res) => {
   const pc = await getPc();
   try {
     const r = req.path.split('/')
